@@ -27,9 +27,9 @@ class loginakses extends CI_Controller {
 	public function formEdit($id)
 	{
 		$recordMhs = $this-> M_Mahasiswa->GetDataMhsDetail($id);
-		echo "<pre>";
-		echo print_r($recordMhs);
-		echo "<pre>";
+		// echo "<pre>";
+		// echo print_r($recordMhs);
+		// echo "<pre>";
 		$DATA = array('data_mhs' =>$recordMhs);
 		$this->load->view('form_edit',$DATA);
 	}
