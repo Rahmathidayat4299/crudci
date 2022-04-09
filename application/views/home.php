@@ -8,7 +8,7 @@
 </Head>
 <Body>
     <H1>Data Mahasiswa Kecoak Sakti</H1>
-    <A Href="">Tambah Mahasiswa</A>
+    <A Href= "<?php echo base_url ('index.php/loginakses/formInput') ?>">Tambah Mahasiswa</A>
     <Br>
     <Br>
     <Table Border="1">
@@ -31,8 +31,7 @@
             <Td><?php echo $row -> nim?></Td>
             <Td><?php echo $row -> nama?></Td>
             <Td><?php echo $row -> jurusan?></Td>
-            <Td>sss</Td>
-            <Td><a href="delete">delete</a>    <a href="edit">edit</a></Td>
+            <Td>  <a  href="<?php echo base_url ('index.php/loginakses/formEdit/'),$row->nim?>">edit</a>  <a href="<?php echo base_url ('index.php/loginakses/AksiDeleteData/'),$row->nim?>">delete</a> </Td>
         </Tr>
        <?php } ?>
     </Table>
